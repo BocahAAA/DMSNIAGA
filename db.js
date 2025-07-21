@@ -3,14 +3,14 @@ const products = [
     id: 1,
     name: "RAT(Rapid Assembly Tent)",
     description: "Quick-deploy inflatable tent used in disaster zones.",
-    image: "images/rat-tent.jpg",
+    image: "images/rat-tent.JPG",
     category: "field"
   },
   {
     id: 2,
     name: "RAST (Rapid Assembly Shelter Technology)",
     description: "TESTBTETST",
-    image: "images/rast.jpg",
+    image: "images/rast.JPG",
     category: "field"
   },
   {
