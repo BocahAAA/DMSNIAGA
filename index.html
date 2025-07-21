@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DMS NIAGA - Field Hospital & Medical Equipment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+
+<header class="header-banner">
+  <a href="index.html" class="logo-area">
+    <img src="images/logo.png" alt="DMS NIAGA Logo">
+  </a>
+  <div class="title-area">
+    <h1>DMS NIAGA</h1>
+    <p>Your Trusted Field Hospital & Medical Equipment Supplier</p>
+  </div>
+
+  
+</header>
+<nav class="navbar">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+  
+<div class="slideshow-container">
+  <div class="slide fade">
+    <img src="images/rat-tent.JPG" >
+  </div>
+  <div class="slide fade">
+    <img src="images/rast.JPG" >
+  </div>
+  <div class="slide fade">
+    <img src="images/avc.jpg" >
+  </div>
+  <div class="slide fade">
+    <img src="images/blood.jpg" >
+  </div>
+</div>
+
+  <main>
+    <div style="text-align: center; margin-bottom: 20px;">
+      <label for="categorySelect"><strong>Filter by Category:</strong></label>
+      <select id="categorySelect" onchange="filterProducts()">
+        <option value="all">All Products</option>
+        <option value="field">Field Hospital Products</option>
+        <option value="medical">Medical Equipment</option>
+      </select>
+    </div>
+
+    <div id="product-list" class="product-section"></div>
+  </main>
+
+  <!-- Modal Popup -->
+  <div id="productModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <img id="modalImage" src="" alt="">
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 DMS NIAGA</p>
+  </footer>
+
+  <script src="db.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
