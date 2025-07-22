@@ -3,10 +3,7 @@ const categorySelect = document.getElementById("categorySelect");
 
 function renderProducts(category = "all") {
   productList.innerHTML = "";
-
-  const filtered = category === "all"
-    ? products
-    : products.filter(p => p.category === category);
+  const filtered = category === "all" ? products : products.filter(p => p.category === category);
 
   filtered.forEach(product => {
     const div = document.createElement("div");
@@ -21,8 +18,7 @@ function renderProducts(category = "all") {
 }
 
 function filterProducts() {
-  const selected = categorySelect.value;
-  renderProducts(selected);
+  renderProducts(categorySelect.value);
 }
 
 function showProductDetail(id) {
@@ -30,31 +26,17 @@ function showProductDetail(id) {
   document.getElementById("modalImage").src = product.image;
   document.getElementById("modalTitle").textContent = product.name;
   document.getElementById("modalDescription").textContent = product.description;
-  document.getElementById("productModal").style.display = "block";
+  document.getElementById("productModal").style.display = "flex";
 }
 
-document.querySelector(".close-btn").onclick = function () {
+document.querySelector(".close-btn").onclick = () => {
   document.getElementById("productModal").style.display = "none";
 };
 
 window.onclick = function (event) {
-  if (event.target.className === "modal") {
+  if (event.target.classList.contains("modal")) {
     document.getElementById("productModal").style.display = "none";
   }
 };
 
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  const slides = document.getElementsByClassName("slide");
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) { slideIndex = 1; }
-  slides[slideIndex - 1].style.display = "block";
-  setTimeout(showSlides, 2000); // Change image every 4 seconds
-}
-
-renderProducts(); // load all on page load
+if (productList) renderProducts();
