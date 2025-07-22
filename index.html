@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>DMS NIAGA - Field Hospital & Medical Equipment</title>
+  <title>DMS NIAGA - Field Hospital Products & Medical Equipment</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
 
 <header class="header-banner">
   <a href="index.html" class="logo-area">
@@ -14,11 +13,10 @@
   </a>
   <div class="title-area">
     <h1>DMS NIAGA</h1>
-    <p>Your Trusted Field Hospital & Medical Equipment Supplier</p>
+    <p>Your Trusted Field Hospital Products & Medical Equipment Supplier</p>
   </div>
-
-  
 </header>
+
 <nav class="navbar">
   <ul>
     <li><a href="index.html">Home</a></li>
@@ -27,50 +25,33 @@
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
-  
+
 <div class="slideshow-container">
-  <div class="slide fade">
-    <img src="images/rat-tent.JPG" >
-  </div>
-  <div class="slide fade">
-    <img src="images/rast.JPG" >
-  </div>
-  <div class="slide fade">
-    <img src="images/avc.jpg" >
-  </div>
-  <div class="slide fade">
-    <img src="images/blood.jpg" >
-  </div>
+  <div class="slide fade"><img src="images/rat.png"></div>
+  <div class="slide fade"><img src="images/rast.JPG"></div>
+  <div class="slide fade"><img src="images/avc.jpg"></div>
+  <div class="slide fade"><img src="images/blood.jpg"></div>
+  <div class="slide fade"><img src="images/trolley.jpg"></div>
 </div>
 
-  <main>
-    <div style="text-align: center; margin-bottom: 20px;">
-      <label for="categorySelect"><strong>Filter by Category:</strong></label>
-      <select id="categorySelect" onchange="filterProducts()">
-        <option value="all">All Products</option>
-        <option value="field">Field Hospital Products</option>
-        <option value="medical">Medical Equipment</option>
-      </select>
-    </div>
+<footer>
+  <p>&copy; 2025 DMS NIAGA</p>
+</footer>
 
-    <div id="product-list" class="product-section"></div>
-  </main>
+<script>
+  let slideIndex = 0;
+  function showSlides() {
+    const slides = document.getElementsByClassName("slide");
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 3000);
+  }
+  showSlides();
+</script>
 
-  <!-- Modal Popup -->
-  <div id="productModal" class="modal">
-    <div class="modal-content">
-      <span class="close-btn">&times;</span>
-      <img id="modalImage" src="" alt="">
-      <h2 id="modalTitle"></h2>
-      <p id="modalDescription"></p>
-    </div>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 DMS NIAGA</p>
-  </footer>
-
-  <script src="db.js"></script>
-  <script src="script.js"></script>
 </body>
 </html>
