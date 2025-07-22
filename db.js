@@ -1,15 +1,15 @@
 const products = [
   {
     id: 1,
-    name: "RAT(Rapid Assembly Tent)",
+    name: "RAT (Rapid Assembly Tent)",
     description: "Quick-deploy inflatable tent used in disaster zones.",
-    image: "images/rat-tent.JPG",
+    image: "images/rat.png",
     category: "field"
   },
   {
     id: 2,
     name: "RAST (Rapid Assembly Shelter Technology)",
-    description: "TESTBTETST",
+    description: "Modular shelter system for rapid field hospital deployment.",
     image: "images/rast.JPG",
     category: "field"
   },
@@ -22,67 +22,59 @@ const products = [
   },
   {
     id: 4,
-    name: "Field Training Fordable Table(T150)",
-    description: "Essential life-saving equipment for emergencies.",
+    name: "Field Training Foldable Table (T150)",
+    description: "Durable table used in field medical and training operations.",
     image: "images/table.jpg",
     category: "medical"
   },
   {
     id: 5,
     name: "Folding Cot",
-    description: "Sterile surgical tools for field or clinic use.",
+    description: "Portable and sturdy cot ideal for temporary field setups.",
     image: "images/folding.jpg",
     category: "medical"
   },
   {
     id: 6,
     name: "Flight Case",
-    description: "Compact X-ray device for emergency diagnostics.",
+    description: "Heavy-duty case for safe transport of medical tools and electronics.",
     image: "images/case.jpg",
     category: "medical"
   },
-    {
+  {
     id: 7,
-    name: "Field Training Foldable Chair–C–01",
-    description: "Compact X-ray device for emergency diagnostics.",
+    name: "Field Training Foldable Chair - C-01",
+    description: "Comfortable and stackable chair for field operations.",
     image: "images/chair.jpg",
     category: "medical"
   },
-    {
+  {
     id: 8,
     name: "Tactical Conversion Box-Shelf",
-    description: "Compact X-ray device for emergency diagnostics.",
+    description: "Multi-functional storage box with integrated shelf system.",
     image: "images/box.jpg",
     category: "medical"
   },
-
-      {
+  {
     id: 9,
     name: "MedEvac4 Tactical Stretcher",
-    description: "Compact X-ray device for emergency diagnostics.",
+    description: "Durable stretcher designed for rapid patient evacuation.",
     image: "images/Stretcher.jpg",
     category: "medical"
   },
-        {
+  {
     id: 10,
     name: "Tactical Litter Stand",
-    description: "Compact X-ray device for emergency diagnostics.",
+    description: "Support stand for stretchers during field medical operations.",
     image: "images/stand.jpg",
     category: "medical"
   },
-         {
+  {
     id: 11,
     name: "Stretcher Trolley",
-    description: "Compact X-ray device for emergency diagnostics.",
+    description: "Mobile stretcher trolley for easy patient transport.",
     image: "images/trolley.jpg",
     category: "medical"
   },
-         {
-    id: 12,
-    name: "Field Blood Donor Chair",
-    description: "Compact X-ray device for emergency diagnostics.",
-    image: "images/blood.jpg",
-    category: "medical"
-  },
-  
+
 ];
