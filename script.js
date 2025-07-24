@@ -27,7 +27,11 @@ function showProductDetail(id) {
   document.getElementById("modalTitle").textContent = product.name;
   document.getElementById("modalDescription").textContent = product.description;
   document.getElementById("productModal").style.display = "flex";
+  document.getElementById('modalDetailImage').src = product.detailImage || '';
+  document.getElementById('modalDetailImage').style.display = product.detailImage ? 'block' : 'none';
+
 }
+
 
 document.querySelector(".close-btn").onclick = () => {
   document.getElementById("productModal").style.display = "none";
@@ -38,5 +42,23 @@ window.onclick = function (event) {
     document.getElementById("productModal").style.display = "none";
   }
 };
+
+function showModal(product) {
+  modalImage.src = product.image;
+  modalTitle.textContent = product.name;
+  modalDescription.textContent = product.description;
+  document.getElementById('modalSpecs').textContent = product.specs || '';
+  
+  const brochureLink = document.getElementById('modalBrochure');
+  if (product.brochure) {
+    brochureLink.href = product.brochure;
+    brochureLink.style.display = 'inline-block';
+  } else {
+    brochureLink.style.display = 'none';
+  }
+
+  modal.style.display = 'flex';
+}
+
 
 if (productList) renderProducts();
