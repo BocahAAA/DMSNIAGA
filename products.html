@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Products - DMS NIAGA</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,6 +26,10 @@
     <li><a href="about.html">About Us</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
+  <div class="search-bar">
+    <input type="text" placeholder="Search...">
+    <button><i class="fas fa-search"></i></button>
+  </div>
 </nav>
 
 <main>
@@ -40,12 +46,15 @@
 </main>
 
 <!-- Modal -->
-<div id="productModal" class="modal">
+<div class="product-modal" id="productModal">
   <div class="modal-content">
     <span class="close-btn">&times;</span>
-    <img id="modalImage" src="" alt="">
+   <img id="modalImage" src="" alt="Product Image" class="main-image">
     <h2 id="modalTitle"></h2>
     <p id="modalDescription"></p>
+    <p id="modalSpecs" class="specs"></p>
+    <img id="modalDetailImage" src="" alt="Product Detail Image" class="detail-image">
+    <a id="modalBrochure" href="brochures/DMS-medical-product.pdf" target="_blank" class="btn-brochure">📄 View Full Brochure (PDF)</a>
   </div>
 </div>
 
