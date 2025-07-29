@@ -97,13 +97,7 @@ main {
   color: red;
 }
 
-footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #002244;
-  color: white;
-  margin-top: 30px;
-}
+
 
 .slideshow-container {
   position: relative;
@@ -306,12 +300,20 @@ footer {
 }
 
 .detail-image {
-  max-width: 100%;
+  display: block;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 1000px; /* Increase this if needed */
   height: auto;
-  margin-top: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
 }
+
+.detail-image:hover {
+  transform: scale(1.02);
+}
+
 
 /* Modal full screen with scroll */
 .product-modal {
@@ -345,15 +347,8 @@ footer {
   border-radius: 8px;
 }
 
-/* Gambar detail besar */
-.detail-image-large {
-  width: 100%;
-  margin-top: 20px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  max-height: 800px;
-  object-fit: contain;
-}
+
+
 
 /* Tutup button */
 .modal-close {
@@ -363,4 +358,29 @@ footer {
   color: #e00;
   cursor: pointer;
 }
+
+
+.simple-footer {
+  background-color: #001c3c;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  padding: 15px 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
+  }
+}
+
 
