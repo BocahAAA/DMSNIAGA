@@ -59,6 +59,10 @@ function showModal(product) {
 
   modal.style.display = 'flex';
 }
+document.getElementById('modalDetailImage').addEventListener('click', function() {
+  const win = window.open();
+  win.document.write('<img src="' + this.src + '" style="width:100%;">');
+});
 
 
 if (productList) renderProducts();
