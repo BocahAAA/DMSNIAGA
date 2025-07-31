@@ -1,6 +1,48 @@
 const productList = document.getElementById("product-list");
 const categorySelect = document.getElementById("categorySelect");
 
+// Get modal and other related elements
+const modal = document.getElementById("productModal");
+const closeBtn = document.querySelector(".close-btn");
+const stickyHeader = document.querySelector(".sticky-header");
+
+// Function to open modal (this is usually inside your product click logic)
+function openModal() {
+  modal.style.display = "block";
+  document.body.style.overflow = "hidden"; // prevent background scroll
+  stickyHeader.style.display = "none";     // Hide navbar + logo
+}
+
+// Function to close modal
+function closeModal() {
+  modal.style.display = "none";
+  document.body.style.overflow = "";       // Restore scroll
+  stickyHeader.style.display = "block";    // Show navbar + logo
+}
+
+// Attach close event
+closeBtn.addEventListener("click", closeModal);
+
+// Optional: Close modal if user clicks outside content
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    closeModal();
+  }
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        window.scrollTo({
+          top: target.offsetTop - 80, // adjust -80 to fit your navbar height
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+
 function renderProducts(category = "all") {
   productList.innerHTML = "";
   const filtered = category === "all" ? products : products.filter(p => p.category === category);
@@ -29,6 +71,8 @@ function showProductDetail(id) {
   document.getElementById("productModal").style.display = "flex";
   document.getElementById('modalDetailImage').src = product.detailImage || '';
   document.getElementById('modalDetailImage').style.display = product.detailImage ? 'block' : 'none';
+
+  openModal(); 
 
 }
 
@@ -59,9 +103,13 @@ function showModal(product) {
 
   modal.style.display = 'flex';
 }
-if (productList) renderProducts();
 document.getElementById('modalDetailImage').addEventListener('click', function() {
   const win = window.open();
   win.document.write('<img src="' + this.src + '" style="width:100%;">');
 });
+
+
+if (productList) renderProducts();
+
+
 
