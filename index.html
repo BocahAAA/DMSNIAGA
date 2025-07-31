@@ -3,11 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <title>DMS NIAGA - Field Hospital Products & Medical Equipment</title>
+   <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    section {
+      padding: 60px 20px;
+    }
+  </style>
 </head>
 <body>
-
+<div class="sticky-header">
 <header class="header-banner">
   <a href="index.html" class="logo-area">
     <img src="images/logo.png" alt="DMS NIAGA Logo">
@@ -21,50 +30,186 @@
 
 <nav class="navbar">
   <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="products.html">Products</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="contact.html">Contact</a></li>
+     <li><a href="#home">Home</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#contact">Contact</a></li>
    
  
   </ul>
-    <div class="search-bar">
-    <input type="text" placeholder="Search...">
-    <button><i class="fas fa-search"></i></button>
-  </div>
+    <a href="https://wa.me/60196709536" target="_blank" class="whatsapp-button">
+  Whatsapp <i class="fab fa-whatsapp"></i>
+</a>
+
 </div>
 </nav>
-
-<div class="slideshow-container">
-  <div class="slide fade"><img src="images/rat.png"></div>
-  <div class="slide fade"><img src="images/rast.JPG"></div>
-  <div class="slide fade"><img src="images/avc.jpg"></div>
-  <div class="slide fade"><img src="images/blood.jpg"></div>
-  <div class="slide fade"><img src="images/trolley.jpg"></div>
 </div>
 
+<section id="home">
+<div class="slideshow-container">
+
+  <div class="slide fade">
+    <img src="images/rat.png" alt="RAT Tent">
+  </div>
+
+  <div class="slide fade">
+    <img src="images/rast.JPG" alt="RAST Tent">
+  </div>
+
+  <div class="slide fade">
+    <img src="images/avc.jpg" alt="AVC">
+  </div>
+
+  <div class="slide fade">
+    <img src="images/blood.jpg" alt="Blood Bag">
+  </div>
+
+  <div class="slide fade">
+    <img src="images/trolley.jpg" alt="Trolley">
+  </div>
+
+  <!-- Navigation arrows -->
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+
+<!-- Dots -->
+<div style="text-align:center" class="dot-wrapper">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+</div>
+</section>
+<!-- PRODUCT SECTION -->
+<section id="products">
+  <main class="contact-container">
+  <h2>Our Products</h2>
+  <p>Showcase of field hospital tents, equipment, etc.</p>
+  </main>
+    <div style="text-align: center; margin-bottom: 20px;">
+    <label for="categorySelect"><strong>Filter by Category:</strong></label>
+    <select id="categorySelect" onchange="filterProducts()">
+      <option value="all">All Products</option>
+      <option value="field">Field Hospital Products</option>
+      <option value="medical">Medical Equipment</option>
+    </select>
+  </div>
+
+  <div id="product-list" class="product-section"></div>
+<div class="product-modal" id="productModal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+   <img id="modalImage" src="" alt="Product Image" class="main-image">
+    <h2 id="modalTitle"></h2>
+    <p id="modalDescription"></p>
+    <p id="modalSpecs" class="specs"></p>
+    <img id="modalDetailImage" src="" alt="Product Detail Image" class="detail-image">
+    <a id="modalBrochure" href="brochures/DMS-medical-product.pdf" target="_blank" class="btn-brochure">📄 View Full Brochure (PDF)</a>
+  </div>
+</div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about">
+ <main class="contact-container">
+   <h2>About Us</h2>
+    <p>DMS NIAGA is a trusted supplier of field hospital and medical equipment across Malaysia. We provide high-quality tents, ICU units, and emergency response tools for medical professionals and military teams.</p>
+  </main>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact">
+ <main class="contact-container">
+  <h2>Contact Us</h2>
+<div class="contact-card">
+  <h3>ROSEMARIA BINTI ABDUL HAMID</h3>
+  <p><i class="fas fa-phone"></i>06-5560830</a></p>
+  <p>
+  <i class="fab fa-whatsapp"></i>
+  <a href="https://wa.me/60196709536" target="_blank">WhatsApp Us</a>
+</p>
+  <p><i class="fas fa-envelope"></i> <a href="mailto:admin@dmsniaga.com.my">dmsniagamsdnbhd@gmail.com </a></p>
+  <p><i class="fab fa-facebook-square"></i> 
+  <a href="https://www.facebook.com/share/161uRQBqty/" target="_blank">Follow us on Facebook</a></p>
+</p>
+
+</div>
+</main>
+</section>
 
 
-<footer class="simple-footer">
-  <p>© 2025 DMS NIAGA. All rights reserved.</p>
+
+
+<footer class="dms-footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <img src="images/logo.png" alt="DMS NIAGA Logo" class="footer-logo">
+      <p>Your Trusted Field Hospital Products & Medical Equipment Supplier.</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/share/161uRQBqty/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.tiktok.com/@dmsniagamsdnbhd?lang=en" target="_blank"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+    <div class="footer-center">
+      <h3>DMS NIAGA (M) SDN BHD</h3>
+      <p>SP 28-1, Jalan Sungai Petai Permai 2 Utama,<br> Taman Sungai Petai Permai 2,<br> 78000 Alor Gajah, Melaka.</p>
+      <p><i class="fas fa-phone-alt"></i> 06-556 0830/019-670 9536</p>
+      <p><i class="fas fa-envelope"></i><a href="mailto:admin@dmsniaga.com.my" class="no-underline"> dmsniagamsdnbhd@gmail.com </p></a> 
+  
+    </div>
+    <div class="footer-right">
+      <h3>DMS NIAGA ENTERPRISE</h3>
+      <p>LOT.2.23, Arked Mara Alor Gajah,  <br>78000 Alor Gajah, Melaka</p>
+      <p><i class="fas fa-phone-alt"></i> 06-556 0830 </p>
+      <p><i class="fas fa-envelope"></i> admin@dmsniaga.com.my</p>
+      
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 DMS NIAGA. All rights reserved.</p>
+  </div>
 </footer>
 
 
 
+
 <script>
-  let slideIndex = 0;
-  function showSlides() {
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    let i;
     const slides = document.getElementsByClassName("slide");
-    for (let i = 0; i < slides.length; i++) {
+    const dots = document.getElementsByClassName("dot");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
     }
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1; }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
     slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 3000);
+    dots[slideIndex - 1].className += " active";
   }
-  showSlides();
-</script>
 
+  // Optional auto slide
+  setInterval(() => {
+    plusSlides(1);
+  }, 5000);
+</script>
+<script src="db.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
