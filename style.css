@@ -2,6 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  padding-top: 170px;
   background: #f4f4f4;
 }
 
@@ -98,41 +99,29 @@ main {
 }
 
 
-
-.slideshow-container {
-  position: relative;
-  max-width: 100%;
-  margin: 20px auto;
-  overflow: hidden;
+#productModal {
+  transition: opacity 0.3s ease;
 }
 
-.slide {
-  display: none;
-}
 
-.slide img {
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 10px;
+  background-color: #fff; /* match your design */
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: opacity 0.3s ease;
 }
 
-.fade {
-  animation: fadeEffect 1s ease-in-out;
-}
-
-@keyframes fadeEffect {
-  from {opacity: 0.4}
-  to {opacity: 1}
-}
 
 .header-banner {
   background-color: #002244;
   color: white;
   display: flex;
   align-items: center;
-  padding: 20px 40px;
-  gap: 20px;
+  padding: 10px 20px;
 }
 
 .logo-area img {
@@ -168,12 +157,11 @@ main {
 
 .navbar {
   background-color: #001c3c;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 40px;
-  flex-wrap: wrap;
+  padding: 10px 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .navbar ul {
@@ -227,7 +215,22 @@ main {
   font-size: 14px;
 }
 
+.whatsapp-button {
+  background-color: #25D366;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
 
+.whatsapp-button:hover {
+  background-color: #1ebe5d;
+}
+ 
 .contact-container {
   max-width: 600px;
   margin: 40px auto;
@@ -359,28 +362,157 @@ main {
   cursor: pointer;
 }
 
-
-.simple-footer {
+.dms-footer {
   background-color: #001c3c;
   color: #fff;
-  text-align: center;
-  font-size: 14px;
   font-family: Arial, sans-serif;
-  padding: 15px 10px;
-  width: 100%;
-  box-sizing: border-box;
+  padding: 40px 20px 10px;
 }
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-left, .footer-center, .footer-right {
+  flex: 1 1 250px;
+}
+
+.footer-logo {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+.footer-social a {
+  color: #fff;
+  margin-right: 10px;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #00bcd4;
+}
+
+.footer-container h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #00bcd4;
+}
+
+.footer-container p {
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #555;
+  margin-top: 20px;
+  padding-top: 15px;
+  font-size: 14px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
-    text-align: center;
     align-items: center;
+    text-align: center;
   }
 
-  .footer-section {
-    margin-bottom: 20px;
+  .footer-left, .footer-center, .footer-right {
+    max-width: 100%;
+  }
+
+  .footer-logo {
+    margin: auto;
   }
 }
 
+.no-underline {
+  text-decoration: none;
+  color: inherit; /* Keeps the same text color */
+}
+.no-underline:hover {
+  text-decoration: underline; /* Optional: show underline on hover */
+}
 
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 12px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  transition: 0.3s;
+  user-select: none;
+  border-radius: 0 3px 3px 0;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Dots */
+.dot-wrapper {
+  margin-top: 10px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fade animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.2s;
+}
+
+@keyframes fade {
+  from { opacity: .4 }
+  to { opacity: 1 }
+}
