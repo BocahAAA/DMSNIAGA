@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DMS NIAGA - Field Hospital Products & Medical Equipment</title>
+   <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    section {
+      padding: 60px 20px;
+    }
+  </style>
+</head>
+<body>
+<div class="sticky-header">
+<header class="header-banner">
+  <a href="index.html" class="logo-area">
+    <img src="images/logo.png" alt="DMS NIAGA Logo">
+  </a>
+  <div class="title-area">
+    <h1>DMS NIAGA</h1>
+    <p>Your Trusted Field Hospital Products & Medical Equipment Supplier</p>
+  </div>
+
+</header>
+
+<nav class="navbar">
+  <ul>
+     <li><a href="#home">Home</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#contact">Contact</a></li>
+   
+ 
+  </ul>
+    <a href="https://wa.me/60196709536" target="_blank" class="whatsapp-button">
+  Whatsapp <i class="fab fa-whatsapp"></i>
+</a>
+
+</div>
+</nav>
+</div>
+
+<section id="home">
+  <div class="slideshow-container">
+
+    <div class="slide fade">
+      <img src="images/rat.png">
+    </div>
+
+    <div class="slide fade">
+      <img src="images/rast.JPG">
+    </div>
+
+    <div class="slide fade">
+      <img src="images/G3.jpeg">
+    </div>
+
+    <div class="slide fade">
+      <img src="images/G2.jpg">
+    </div>
+        <div class="slide fade">
+      <img src="images/G4.jpg">
+    </div>
+      <div class="slide fade">
+      <img src="images/G5.jpeg">
+    </div>
+        <div class="slide fade">
+      <img src="images/G6.jpeg">
+    </div>
+      <div class="slide fade">
+      <img src="images/G7.jpg">
+    </div>
+      <div class="slide fade">
+      <img src="images/G8.jpg">
+    </div>
+      <div class="slide fade">
+      <img src="images/G9.jpg">
+    </div>
+
+    <div class="slide fade">
+      <img src="images/G1.jpeg">
+    </div>
+  
+
+    <!-- Navigation arrows -->
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+  </div>
+
+  <!-- Dots -->
+  <div style="text-align:center" class="dot-wrapper">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+     <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+    <span class="dot" onclick="currentSlide(8)"></span>
+    <span class="dot" onclick="currentSlide(9)"></span>
+        <span class="dot" onclick="currentSlide(10)"></span>
+    <span class="dot" onclick="currentSlide(11)"></span>
+  </div>
+</section>
+
+<!-- PRODUCT SECTION -->
+<section id="products">
+  <main class="product-container">
+  <h2>Our Products</h2>
+  <p>Showcase of field hospital tents, equipment, etc.</p>
+      <div style="text-align: center; margin-bottom: 20px;">
+    <label for="categorySelect"><strong>Filter by Category:</strong></label>
+    <select id="categorySelect" onchange="filterProducts()">
+      <option value="all">All Products</option>
+      <option value="field">Field Hospital Products</option>
+      <option value="medical">Medical Equipment</option>
+    </select>
+  </div>
+  </main>
+
+
+  <div id="product-list" class="product-section"></div>
+<div class="product-modal" id="productModal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+   <img id="modalImage" src="" alt="Product Image" class="main-image">
+    <h2 id="modalTitle"></h2>
+    <p id="modalDescription"></p>
+    <p id="modalSpecs" class="specs"></p>
+    <img id="modalDetailImage" src="" alt="Product Detail Image" class="detail-image">
+    <a id="modalBrochure" href="brochures/DMS-medical-product.pdf" target="_blank" class="btn-brochure">📄 View Full Brochure (PDF)</a>
+  </div>
+</div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about">
+  <div class="about-card">
+    <div class="about-content">
+      <!-- About Us -->
+     <div class="about-visi-container">
+  <!-- About Us -->
+  <div class="about-section">
+    <h2>About Us</h2>
+    <p>
+      DMS NIAGA merupakan sebuah syarikat bumiputera Melayu yang berdaftar di bawah
+      Akta Pendaftaran Perniagaan 1965 yang mula beroperasi pada tahun 2004.
+      Mempunyai visi dan misi untuk menjadi pembekal dan penyedia perkhidmatan
+      yang terbaik setanding dengan negara luar yang mendominasi bidang ini.
+      Menjalankan kerja-kerja kontraktor kejuruteraan awam, mekanikal, elektrikal,
+      penyediaan perkakasan IT, kerja-kerja keselamatan dan penyelenggaraan jalan
+      raya dan lain-lain. Di samping itu, syarikat kami mempunyai rancangan
+      perniagaan yang teratur dan berusaha untuk menjadi perniagaan yang maju dan terkenal.
+    </p>
+  </div>
+
+  <!-- Visi & Misi -->
+  <div class="visi-section">
+    <h2>Visi</h2>
+    <p>
+      Memperluaskan cabang perniagaan yang dijalankan. Selain itu, syarikat ini
+      juga ingin mengukuhkan reputasi pencapaian dalam menyediakan perkhidmatan
+      dan bekalan kepada pelanggan yang lebih terjamin dan berkualiti tinggi.
+    </p>
+
+    <h2>Misi</h2>
+    <p>
+      Memperluaskan pengetahuan dan teknik terkini dalam pengurusan projek dan
+      perniagaan. Persaingan yang sihat dan profesional seterusnya menghasilkan
+      rangkaian perniagaan yang luas. Menjadikan salah satu syarikat bumiputera
+      yang berjaya maju dan berdaya saing.
+    </p>
+  </div>
+</div>
+
+
+
+    <!-- Slideshow Gambar Pasukan -->
+     <!-- Slideshow Gambar Pasukan -->
+<div class="team-slideshow">
+      <div class="team-slide fade"><img src="images/G1.jpeg" alt="Team 1"></div>
+    <div class="team-slide fade"><img src="images/G2.jpg" alt="Team 2"></div>
+    <div class="team-slide fade"><img src="images/G3.jpeg" alt="Team 3"></div>
+     <div class="team-slide fade"><img src="images/G5.jpeg" alt="Team 4"></div>
+      <div class="team-slide fade"><img src="images/G6.jpeg" alt="Team 5"></div>
+    <div class="team-slide fade"><img src="images/G4.jpg" alt="Team 6"></div>
+
+  <a class="prev" onclick="plusTeamSlides(-1)">❮</a>
+  <a class="next" onclick="plusTeamSlides(1)">❯</a>
+
+  <!-- Dot navigation -->
+  <div class="dot-container">
+    <span class="team-dot" onclick="currentTeamSlide(1)"></span>
+    <span class="team-dot" onclick="currentTeamSlide(2)"></span>
+    <span class="team-dot" onclick="currentTeamSlide(3)"></span>
+    <span class="team-dot" onclick="currentTeamSlide(4)"></span>
+    <span class="team-dot" onclick="currentTeamSlide(5)"></span>
+    <span class="team-dot" onclick="currentTeamSlide(6)"></span>
+
+  </div>
+</div>
+
+
+    <!-- Video -->
+    <div class="video-wrapper">
+      <video class="video-landscape" controls>
+        <source src="videos/DMS.mp4" type="video/mp4">
+      </video>
+      <video class="video-portrait" controls>
+        <source src="videos/DMS2.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- CONTACT SECTION -->
+<section id="contact">
+  <div class="contact-container">
+    <!-- Kiri - Email -->
+    <div class="contact-left">
+      <h2>Email Us</h2>
+      <p>Untuk pertanyaan atau pembelian, sila hubungi kami melalui emel di bawah:</p>
+      <a href="mailto:dmsniagamsdnbhd@gmail.com" class="contact-btn email-btn">
+        📧 Email Us
+      </a>
+    </div>
+
+    <!-- Kanan - WhatsApp -->
+    <div class="contact-right">
+      <h2>WhatsApp Us</h2>
+      <p>Untuk maklumat segera atau tempahan pantas, sila hubungi kami melalui WhatsApp:</p>
+      <a href="https://wa.me/60196709536" target="_blank" class="contact-btn whatsapp-btn">
+        💬 Chat on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<footer class="dms-footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <img src="images/logo.png" alt="DMS NIAGA Logo" class="footer-logo">
+      <p>Your Trusted Field Hospital Products & Medical Equipment Supplier.</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/share/161uRQBqty/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.tiktok.com/@dmsniagamsdnbhd?lang=en" target="_blank"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+    <div class="footer-center">
+      <h3>DMS NIAGA (M) SDN BHD</h3>
+      <p>SP 28-1, Jalan Sungai Petai Permai 2 Utama,<br> Taman Sungai Petai Permai 2,<br> 78000 Alor Gajah, Melaka.</p>
+      <p><i class="fas fa-phone-alt"></i> 06-556 0830/019-670 9536</p>
+      <p><i class="fas fa-envelope"></i><a href="mailto:admin@dmsniaga.com.my" class="no-underline"> dmsniagamsdnbhd@gmail.com </p></a> 
+  
+    </div>
+    <div class="footer-right">
+      <h3>DMS NIAGA ENTERPRISE</h3>
+      <p>LOT.2.23, Arked Mara Alor Gajah,  <br>78000 Alor Gajah, Melaka</p>
+      <p><i class="fas fa-phone-alt"></i> 06-556 0830 </p>
+      <p><i class="fas fa-envelope"></i> admin@dmsniaga.com.my</p>
+      
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 DMS NIAGA. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    let i;
+    const slides = document.getElementsByClassName("slide");
+    const dots = document.getElementsByClassName("dot");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+  }
+
+  // Optional auto slide
+  setInterval(() => {
+    plusSlides(1);
+  }, 5000);
+</script>
+<script src="db.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
