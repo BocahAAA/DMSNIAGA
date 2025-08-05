@@ -111,5 +111,33 @@ document.getElementById('modalDetailImage').addEventListener('click', function()
 
 if (productList) renderProducts();
 
+let teamIndex = 1;
+showTeamSlides(teamIndex);
 
+function plusTeamSlides(n) {
+  showTeamSlides(teamIndex += n);
+}
 
+function currentTeamSlide(n) {
+  showTeamSlides(teamIndex = n);
+}
+
+function showTeamSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("team-slide");
+  let dots = document.getElementsByClassName("team-dot");
+
+  if (n > slides.length) {teamIndex = 1}
+  if (n < 1) {teamIndex = slides.length}
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  slides[teamIndex-1].style.display = "block";  
+  dots[teamIndex-1].className += " active";
+}
