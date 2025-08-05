@@ -5,6 +5,8 @@
   <title>DMS NIAGA - Field Hospital Products & Medical Equipment</title>
    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     html {
@@ -46,50 +48,75 @@
 </div>
 
 <section id="home">
-<div class="slideshow-container">
+  <div class="slideshow-container">
 
-  <div class="slide fade">
-    <img src="images/rat.png" alt="RAT Tent">
+    <div class="slide fade">
+      <img src="images/rat.png">
+    </div>
+
+    <div class="slide fade">
+      <img src="images/rast.JPG">
+    </div>
+
+    <div class="slide fade">
+      <img src="images/G3.jpeg">
+    </div>
+
+    <div class="slide fade">
+      <img src="images/G2.jpg">
+    </div>
+        <div class="slide fade">
+      <img src="images/G4.jpg">
+    </div>
+      <div class="slide fade">
+      <img src="images/G5.jpeg">
+    </div>
+        <div class="slide fade">
+      <img src="images/G6.jpeg">
+    </div>
+      <div class="slide fade">
+      <img src="images/G7.jpg">
+    </div>
+      <div class="slide fade">
+      <img src="images/G8.jpg">
+    </div>
+      <div class="slide fade">
+      <img src="images/G9.jpg">
+    </div>
+
+    <div class="slide fade">
+      <img src="images/G1.jpeg">
+    </div>
+  
+
+    <!-- Navigation arrows -->
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
   </div>
 
-  <div class="slide fade">
-    <img src="images/rast.JPG" alt="RAST Tent">
+  <!-- Dots -->
+  <div style="text-align:center" class="dot-wrapper">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+     <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+    <span class="dot" onclick="currentSlide(8)"></span>
+    <span class="dot" onclick="currentSlide(9)"></span>
+        <span class="dot" onclick="currentSlide(10)"></span>
+    <span class="dot" onclick="currentSlide(11)"></span>
   </div>
-
-  <div class="slide fade">
-    <img src="images/avc.jpg" alt="AVC">
-  </div>
-
-  <div class="slide fade">
-    <img src="images/blood.jpg" alt="Blood Bag">
-  </div>
-
-  <div class="slide fade">
-    <img src="images/trolley.jpg" alt="Trolley">
-  </div>
-
-  <!-- Navigation arrows -->
-  <a class="prev" onclick="plusSlides(-1)">❮</a>
-  <a class="next" onclick="plusSlides(1)">❯</a>
-
-</div>
-
-<!-- Dots -->
-<div style="text-align:center" class="dot-wrapper">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-  <span class="dot" onclick="currentSlide(4)"></span>
-  <span class="dot" onclick="currentSlide(5)"></span>
-</div>
 </section>
+
 <!-- PRODUCT SECTION -->
 <section id="products">
-  <main class="contact-container">
+  <main class="product-container">
   <h2>Our Products</h2>
   <p>Showcase of field hospital tents, equipment, etc.</p>
-  </main>
-    <div style="text-align: center; margin-bottom: 20px;">
+      <div style="text-align: center; margin-bottom: 20px;">
     <label for="categorySelect"><strong>Filter by Category:</strong></label>
     <select id="categorySelect" onchange="filterProducts()">
       <option value="all">All Products</option>
@@ -97,6 +124,8 @@
       <option value="medical">Medical Equipment</option>
     </select>
   </div>
+  </main>
+
 
   <div id="product-list" class="product-section"></div>
 <div class="product-modal" id="productModal">
@@ -114,31 +143,113 @@
 
 <!-- ABOUT SECTION -->
 <section id="about">
- <main class="contact-container">
-   <h2>About Us</h2>
-    <p>DMS NIAGA is a trusted supplier of field hospital and medical equipment across Malaysia. We provide high-quality tents, ICU units, and emergency response tools for medical professionals and military teams.</p>
-  </main>
+  <div class="about-card">
+    <div class="about-content">
+      <!-- About Us -->
+     <div class="about-visi-container">
+  <!-- About Us -->
+  <div class="about-section">
+    <h2>About Us</h2>
+    <p>
+      DMS NIAGA merupakan sebuah syarikat bumiputera Melayu yang berdaftar di bawah
+      Akta Pendaftaran Perniagaan 1965 yang mula beroperasi pada tahun 2004.
+      Mempunyai visi dan misi untuk menjadi pembekal dan penyedia perkhidmatan
+      yang terbaik setanding dengan negara luar yang mendominasi bidang ini.
+      Menjalankan kerja-kerja kontraktor kejuruteraan awam, mekanikal, elektrikal,
+      penyediaan perkakasan IT, kerja-kerja keselamatan dan penyelenggaraan jalan
+      raya dan lain-lain. Di samping itu, syarikat kami mempunyai rancangan
+      perniagaan yang teratur dan berusaha untuk menjadi perniagaan yang maju dan terkenal.
+    </p>
+  </div>
+
+  <!-- Visi & Misi -->
+  <div class="visi-section">
+    <h2>Visi</h2>
+    <p>
+      Memperluaskan cabang perniagaan yang dijalankan. Selain itu, syarikat ini
+      juga ingin mengukuhkan reputasi pencapaian dalam menyediakan perkhidmatan
+      dan bekalan kepada pelanggan yang lebih terjamin dan berkualiti tinggi.
+    </p>
+
+    <h2>Misi</h2>
+    <p>
+      Memperluaskan pengetahuan dan teknik terkini dalam pengurusan projek dan
+      perniagaan. Persaingan yang sihat dan profesional seterusnya menghasilkan
+      rangkaian perniagaan yang luas. Menjadikan salah satu syarikat bumiputera
+      yang berjaya maju dan berdaya saing.
+    </p>
+  </div>
+</div>
+
+
+
+    <!-- Slideshow Gambar Pasukan -->
+     <!-- Slideshow Gambar Pasukan -->
+<div class="team-slideshow">
+      <div class="team-slide fade"><img src="images/G1.jpeg" alt="Team 1"></div>
+    <div class="team-slide fade"><img src="images/G2.jpg" alt="Team 2"></div>
+    <div class="team-slide fade"><img src="images/G3.jpeg" alt="Team 3"></div>
+     <div class="team-slide fade"><img src="images/G5.jpeg" alt="Team 4"></div>
+      <div class="team-slide fade"><img src="images/G6.jpeg" alt="Team 5"></div>
+    <div class="team-slide fade"><img src="images/G4.jpg" alt="Team 6"></div>
+
+  <a class="prev" onclick="plusTeamSlides(-1)">❮</a>
+  <a class="next" onclick="plusTeamSlides(1)">❯</a>
+
+  <!-- Dot navigation -->
+  <div class="dot-container">
+    <span class="team-dot" onclick="currentTeamSlide(1)"></span>
+    <span class="team-dot" onclick="currentTeamSlide(2)"></span>
+    <span class="team-dot" onclick="currentTeamSlide(3)"></span>
+    <span class="team-dot" onclick="currentTeamSlide(4)"></span>
+    <span class="team-dot" onclick="currentTeamSlide(5)"></span>
+    <span class="team-dot" onclick="currentTeamSlide(6)"></span>
+
+  </div>
+</div>
+
+
+    <!-- Video -->
+    <div class="video-wrapper">
+      <video class="video-landscape" controls>
+        <source src="videos/DMS.mp4" type="video/mp4">
+      </video>
+      <video class="video-portrait" controls>
+        <source src="videos/DMS2.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
 </section>
+
+
+
+
 
 <!-- CONTACT SECTION -->
 <section id="contact">
- <main class="contact-container">
-  <h2>Contact Us</h2>
-<div class="contact-card">
-  <h3>ROSEMARIA BINTI ABDUL HAMID</h3>
-  <p><i class="fas fa-phone"></i>06-5560830</a></p>
-  <p>
-  <i class="fab fa-whatsapp"></i>
-  <a href="https://wa.me/60196709536" target="_blank">WhatsApp Us</a>
-</p>
-  <p><i class="fas fa-envelope"></i> <a href="mailto:admin@dmsniaga.com.my">dmsniagamsdnbhd@gmail.com </a></p>
-  <p><i class="fab fa-facebook-square"></i> 
-  <a href="https://www.facebook.com/share/161uRQBqty/" target="_blank">Follow us on Facebook</a></p>
-</p>
+  <div class="contact-container">
+    <!-- Kiri - Email -->
+    <div class="contact-left">
+      <h2>Email Us</h2>
+      <p>Untuk pertanyaan atau pembelian, sila hubungi kami melalui emel di bawah:</p>
+      <a href="mailto:dmsniagamsdnbhd@gmail.com" class="contact-btn email-btn">
+        📧 Email Us
+      </a>
+    </div>
 
-</div>
-</main>
+    <!-- Kanan - WhatsApp -->
+    <div class="contact-right">
+      <h2>WhatsApp Us</h2>
+      <p>Untuk maklumat segera atau tempahan pantas, sila hubungi kami melalui WhatsApp:</p>
+      <a href="https://wa.me/60196709536" target="_blank" class="contact-btn whatsapp-btn">
+        💬 Chat on WhatsApp
+      </a>
+    </div>
+  </div>
 </section>
+
+
+
 
 
 
