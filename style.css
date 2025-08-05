@@ -1,518 +1,326 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  padding-top: 170px;
-  background: #f4f4f4;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DMS NIAGA - Field Hospital Products & Medical Equipment</title>
+   <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet">
 
-header {
-  background-color: #002244;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    section {
+      padding: 60px 20px;
+    }
+  </style>
+</head>
+<body>
+<div class="sticky-header">
+<header class="header-banner">
+  <a href="index.html" class="logo-area">
+    <img src="images/logo.png" alt="DMS NIAGA Logo">
+  </a>
+  <div class="title-area">
+    <h1>DMS NIAGA</h1>
+    <p>Your Trusted Field Hospital Products & Medical Equipment Supplier</p>
+  </div>
 
-header img {
-  display: block;
-  margin: 0 auto 10px;
-}
+</header>
 
-main {
-  padding: 20px;
-}
-
-.product-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.product {
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  text-align: center;
-  padding: 16px;
-}
-
-.product img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  cursor: pointer;
-}
-
-.product h2 {
-  margin: 12px 0 6px;
-  font-size: 18px;
-}
-
-.product p {
-  font-size: 14px;
-  color: #555;
-}
-
-/* Modal styles */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  align-items: center;
-  justify-content: center;
-}
-
-.modal-content {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 500px;
-  width: 90%;
-  text-align: center;
-  position: relative;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-}
-
-.modal-content img {
-  width: 100%;
-  height: auto;
-  max-height: 300px;
-  object-fit: contain;
-}
-
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 24px;
-  cursor: pointer;
-  color: red;
-}
-
-.close-btn:hover {
-  color: red;
-}
-
-
-#productModal {
-  transition: opacity 0.3s ease;
-}
-
-
-.sticky-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #fff; /* match your design */
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  transition: opacity 0.3s ease;
-}
-
-
-.header-banner {
-  background-color: #002244;
-  color: white;
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-}
-
-.logo-area img {
-  height: 100px;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-}
-
-.logo-area:hover img {
-  transform: scale(1.1);
-}
-
-.title-area {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
-}
-
-.title-area h1 {
-  margin: 0;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.title-area p {
-  margin: 4px 0 0;
-  font-size: 14px;
-  color: #ccc;
-}
-
-
-
-.navbar {
-  background-color: #001c3c;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.navbar ul {
-  list-style-type: none;
-  display: flex;
-  gap: 40px;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar ul li a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.navbar ul li a:hover {
-  color: #ffcc00;
-}
-
-.navbar .search-bar {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background-color: white;
-  padding: 5px 10px;
-  border-radius: 6px;
-  max-width: 300px;
-}
-
-.navbar .search-bar button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  display: flex;
-  align-items: center;
-}
-
-.navbar .search-bar button i {
-  font-size: 18px;
-  color: #001c3c;
-}
-
-.navbar .search-bar input[type="text"] {
-  border: none;
-  outline: none;
-  flex: 1;
-  padding: 6px;
-  font-size: 14px;
-}
-
-.whatsapp-button {
-  background-color: #25D366;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-weight: bold;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.whatsapp-button:hover {
-  background-color: #1ebe5d;
-}
+<nav class="navbar">
+  <ul>
+     <li><a href="#home">Home</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#contact">Contact</a></li>
+   
  
-.contact-container {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  text-align: center;
-}
+  </ul>
+    <a href="https://wa.me/60196709536" target="_blank" class="whatsapp-button">
+  Whatsapp <i class="fab fa-whatsapp"></i>
+</a>
 
-.contact-container h2 {
-  margin-bottom: 20px;
-  color: #002244;
-}
+</div>
+</nav>
+</div>
 
-.contact-card h3 {
-  margin-bottom: 10px;
-  font-size: 22px;
-  color: #001c3c;
-}
+<section id="home">
+  <div class="slideshow-container">
 
-.contact-card p {
-  font-size: 16px;
-  margin: 10px 0;
-}
+    <div class="slide fade">
+      <img src="images/rat.png">
+    </div>
 
-.contact-card i {
-  color: #001c3c;
-  margin-right: 10px;
-}
+    <div class="slide fade">
+      <img src="images/rast.JPG">
+    </div>
 
-.contact-card a {
-  color: #002244;
-  text-decoration: none;
-}
+    <div class="slide fade">
+      <img src="images/G3.jpeg">
+    </div>
 
-.contact-card a:hover {
-  text-decoration: underline;
-}
+    <div class="slide fade">
+      <img src="images/G2.jpg">
+    </div>
+        <div class="slide fade">
+      <img src="images/G4.jpg">
+    </div>
+      <div class="slide fade">
+      <img src="images/G5.jpeg">
+    </div>
+        <div class="slide fade">
+      <img src="images/G6.jpeg">
+    </div>
+      <div class="slide fade">
+      <img src="images/G7.jpg">
+    </div>
+      <div class="slide fade">
+      <img src="images/G8.jpg">
+    </div>
+      <div class="slide fade">
+      <img src="images/G9.jpg">
+    </div>
 
-.contact-card i.fab {
-  color: #3b5998; /* Facebook blue */
-  font-size: 20px;
-  vertical-align: middle;
-}
-.contact-card i.fab.fa-whatsapp {
-  color: #25D366; /* WhatsApp green */
-  font-size: 20px;
-  margin-right: 8px;
-}
+    <div class="slide fade">
+      <img src="images/G1.jpeg">
+    </div>
+  
 
-.btn-brochure {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 16px;
-  background: #001c3c;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-}
+    <!-- Navigation arrows -->
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
 
-.btn-brochure:hover {
-  background: #004080;
-}
+  </div>
 
-.specs {
-  margin-top: 10px;
-  font-size: 0.95rem;
-  color: #333;
-}
+  <!-- Dots -->
+  <div style="text-align:center" class="dot-wrapper">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+     <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+    <span class="dot" onclick="currentSlide(8)"></span>
+    <span class="dot" onclick="currentSlide(9)"></span>
+        <span class="dot" onclick="currentSlide(10)"></span>
+    <span class="dot" onclick="currentSlide(11)"></span>
+  </div>
+</section>
 
-.detail-image {
-  display: block;
-  margin: 20px auto;
-  width: 100%;
-  max-width: 1000px; /* Increase this if needed */
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease;
-}
-
-.detail-image:hover {
-  transform: scale(1.02);
-}
-
-
-/* Modal full screen with scroll */
-.product-modal {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow-y: auto; /* Enable scroll */
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 40px 20px;
-  box-sizing: border-box;
-}
-
-/* Inner modal box */
-.modal-content {
-  background-color: white;
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-/* Image utama */
-.main-image {
-  width: 100%;
-  max-height: 400px;
-  object-fit: contain;
-  border-radius: 8px;
-}
+<!-- PRODUCT SECTION -->
+<section id="products">
+  <main class="product-container">
+  <h2>Our Products</h2>
+  <p>Showcase of field hospital tents, equipment, etc.</p>
+      <div style="text-align: center; margin-bottom: 20px;">
+    <label for="categorySelect"><strong>Filter by Category:</strong></label>
+    <select id="categorySelect" onchange="filterProducts()">
+      <option value="all">All Products</option>
+      <option value="field">Field Hospital Products</option>
+      <option value="medical">Medical Equipment</option>
+    </select>
+  </div>
+  </main>
 
 
+  <div id="product-list" class="product-section"></div>
+<div class="product-modal" id="productModal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+   <img id="modalImage" src="" alt="Product Image" class="main-image">
+    <h2 id="modalTitle"></h2>
+    <p id="modalDescription"></p>
+    <p id="modalSpecs" class="specs"></p>
+    <img id="modalDetailImage" src="" alt="Product Detail Image" class="detail-image">
+    <a id="modalBrochure" href="brochures/DMS-medical-product.pdf" target="_blank" class="btn-brochure">📄 View Full Brochure (PDF)</a>
+  </div>
+</div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about">
+  <div class="about-card">
+    <div class="about-content">
+      <!-- About Us -->
+     <div class="about-visi-container">
+  <!-- About Us -->
+  <div class="about-section">
+    <h2>About Us</h2>
+    <p>
+      DMS NIAGA merupakan sebuah syarikat bumiputera Melayu yang berdaftar di bawah
+      Akta Pendaftaran Perniagaan 1965 yang mula beroperasi pada tahun 2004.
+      Mempunyai visi dan misi untuk menjadi pembekal dan penyedia perkhidmatan
+      yang terbaik setanding dengan negara luar yang mendominasi bidang ini.
+      Menjalankan kerja-kerja kontraktor kejuruteraan awam, mekanikal, elektrikal,
+      penyediaan perkakasan IT, kerja-kerja keselamatan dan penyelenggaraan jalan
+      raya dan lain-lain. Di samping itu, syarikat kami mempunyai rancangan
+      perniagaan yang teratur dan berusaha untuk menjadi perniagaan yang maju dan terkenal.
+    </p>
+  </div>
+
+  <!-- Visi & Misi -->
+  <div class="visi-section">
+    <h2>Visi</h2>
+    <p>
+      Memperluaskan cabang perniagaan yang dijalankan. Selain itu, syarikat ini
+      juga ingin mengukuhkan reputasi pencapaian dalam menyediakan perkhidmatan
+      dan bekalan kepada pelanggan yang lebih terjamin dan berkualiti tinggi.
+    </p>
+
+    <h2>Misi</h2>
+    <p>
+      Memperluaskan pengetahuan dan teknik terkini dalam pengurusan projek dan
+      perniagaan. Persaingan yang sihat dan profesional seterusnya menghasilkan
+      rangkaian perniagaan yang luas. Menjadikan salah satu syarikat bumiputera
+      yang berjaya maju dan berdaya saing.
+    </p>
+  </div>
+</div>
 
 
-/* Tutup button */
-.modal-close {
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  color: #e00;
-  cursor: pointer;
-}
 
-.dms-footer {
-  background-color: #001c3c;
-  color: #fff;
-  font-family: Arial, sans-serif;
-  padding: 40px 20px 10px;
-}
+    <!-- Slideshow Gambar Pasukan -->
+     <!-- Slideshow Gambar Pasukan -->
+<div class="team-slideshow">
+      <div class="team-slide fade"><img src="images/G1.jpeg" alt="Team 1"></div>
+    <div class="team-slide fade"><img src="images/G2.jpg" alt="Team 2"></div>
+    <div class="team-slide fade"><img src="images/G3.jpeg" alt="Team 3"></div>
+     <div class="team-slide fade"><img src="images/G5.jpeg" alt="Team 4"></div>
+      <div class="team-slide fade"><img src="images/G6.jpeg" alt="Team 5"></div>
+    <div class="team-slide fade"><img src="images/G4.jpg" alt="Team 6"></div>
 
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
-  max-width: 1200px;
-  margin: auto;
-}
+  <a class="prev" onclick="plusTeamSlides(-1)">❮</a>
+  <a class="next" onclick="plusTeamSlides(1)">❯</a>
 
-.footer-left, .footer-center, .footer-right {
-  flex: 1 1 250px;
-}
+  <!-- Dot navigation -->
+  <div class="dot-container">
+    <span class="team-dot" onclick="currentTeamSlide(1)"></span>
+    <span class="team-dot" onclick="currentTeamSlide(2)"></span>
+    <span class="team-dot" onclick="currentTeamSlide(3)"></span>
+    <span class="team-dot" onclick="currentTeamSlide(4)"></span>
+    <span class="team-dot" onclick="currentTeamSlide(5)"></span>
+    <span class="team-dot" onclick="currentTeamSlide(6)"></span>
 
-.footer-logo {
-  width: 120px;
-  margin-bottom: 15px;
-}
+  </div>
+</div>
 
-.footer-social a {
-  color: #fff;
-  margin-right: 10px;
-  font-size: 18px;
-  transition: color 0.3s;
-}
 
-.footer-social a:hover {
-  color: #00bcd4;
-}
+    <!-- Video -->
+    <div class="video-wrapper">
+      <video class="video-landscape" controls>
+        <source src="videos/DMS.mp4" type="video/mp4">
+      </video>
+      <video class="video-portrait" controls>
+        <source src="videos/DMS2.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
 
-.footer-container h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #00bcd4;
-}
 
-.footer-container p {
-  margin: 5px 0;
-  line-height: 1.5;
-}
 
-.footer-bottom {
-  text-align: center;
-  border-top: 1px solid #555;
-  margin-top: 20px;
-  padding-top: 15px;
-  font-size: 14px;
-}
 
-/* Responsive */
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+
+<!-- CONTACT SECTION -->
+<section id="contact">
+  <div class="contact-container">
+    <!-- Kiri - Email -->
+    <div class="contact-left">
+      <h2>Email Us</h2>
+      <p>Untuk pertanyaan atau pembelian, sila hubungi kami melalui emel di bawah:</p>
+      <a href="mailto:dmsniagamsdnbhd@gmail.com" class="contact-btn email-btn">
+        📧 Email Us
+      </a>
+    </div>
+
+    <!-- Kanan - WhatsApp -->
+    <div class="contact-right">
+      <h2>WhatsApp Us</h2>
+      <p>Untuk maklumat segera atau tempahan pantas, sila hubungi kami melalui WhatsApp:</p>
+      <a href="https://wa.me/60196709536" target="_blank" class="contact-btn whatsapp-btn">
+        💬 Chat on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<footer class="dms-footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <img src="images/logo.png" alt="DMS NIAGA Logo" class="footer-logo">
+      <p>Your Trusted Field Hospital Products & Medical Equipment Supplier.</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/share/161uRQBqty/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.tiktok.com/@dmsniagamsdnbhd?lang=en" target="_blank"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+    <div class="footer-center">
+      <h3>DMS NIAGA (M) SDN BHD</h3>
+      <p>SP 28-1, Jalan Sungai Petai Permai 2 Utama,<br> Taman Sungai Petai Permai 2,<br> 78000 Alor Gajah, Melaka.</p>
+      <p><i class="fas fa-phone-alt"></i> 06-556 0830/019-670 9536</p>
+      <p><i class="fas fa-envelope"></i><a href="mailto:admin@dmsniaga.com.my" class="no-underline"> dmsniagamsdnbhd@gmail.com </p></a> 
+  
+    </div>
+    <div class="footer-right">
+      <h3>DMS NIAGA ENTERPRISE</h3>
+      <p>LOT.2.23, Arked Mara Alor Gajah,  <br>78000 Alor Gajah, Melaka</p>
+      <p><i class="fas fa-phone-alt"></i> 06-556 0830 </p>
+      <p><i class="fas fa-envelope"></i> admin@dmsniaga.com.my</p>
+      
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 DMS NIAGA. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
   }
 
-  .footer-left, .footer-center, .footer-right {
-    max-width: 100%;
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
   }
 
-  .footer-logo {
-    margin: auto;
+  function showSlides(n) {
+    let i;
+    const slides = document.getElementsByClassName("slide");
+    const dots = document.getElementsByClassName("dot");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
   }
-}
 
-.no-underline {
-  text-decoration: none;
-  color: inherit; /* Keeps the same text color */
-}
-.no-underline:hover {
-  text-decoration: underline; /* Optional: show underline on hover */
-}
-
-
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.slide {
-  display: none;
-}
-
-.slide img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 12px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 24px;
-  transition: 0.3s;
-  user-select: none;
-  border-radius: 0 3px 3px 0;
-  background-color: rgba(0,0,0,0.5);
-}
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Dots */
-.dot-wrapper {
-  margin-top: 10px;
-}
-
-.dot {
-  cursor: pointer;
-  height: 12px;
-  width: 12px;
-  margin: 0 4px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fade animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.2s;
-}
-
-@keyframes fade {
-  from { opacity: .4 }
-  to { opacity: 1 }
-}
+  // Optional auto slide
+  setInterval(() => {
+    plusSlides(1);
+  }, 5000);
+</script>
+<script src="db.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
