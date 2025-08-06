@@ -2,7 +2,7 @@ const products = [
   {
     id: 1,
   name: "RAT (Rapid Assembly Tent)",
-  image: "images/rat.png",
+  image: "images/rat.jpeg",
   detailImage: "images/rat-detail.jpg", // Tambah gambar detail di sini
   description: "Quick-deploy inflatable tent used in disaster zones.",
   specs: "Size: 5m x 6m. Weight: 40kg. Setup time: 10 mins.",
@@ -91,3 +91,4 @@ const products = [
   },
 
 ];
+
