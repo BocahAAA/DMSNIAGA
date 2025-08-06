@@ -13,7 +13,7 @@ const products = [
     id: 2,
     name: "RAST (Rapid Assembly Shelter Technology)",
     description: "Modular shelter system for rapid field hospital deployment.",
-    image: "images/rast.JPG",
+    image: "images/rast.jpg",
      detailImage: "images/rast-detail.jpg", 
     category: "field"
   },
@@ -91,6 +91,7 @@ const products = [
   },
 
 ];
+
 
 
 
